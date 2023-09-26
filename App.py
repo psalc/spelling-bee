@@ -3,15 +3,15 @@ from api import get_words, filter_words
 
 st.header("Solve Spelling Bee!")
 
-letters = st.text_input("Letters")
+letters = st.text_input("Letters").lower()
 
 words = get_words(letters)
 
-must_contain = st.text_input("Center letter")
+must_contain = st.text_input("Center letter").lower()
 
 st.header("Optional filters")
 
-starts_with = st.text_input("Must start with...", '')
+starts_with = st.text_input("Must start with...", '').lower()
 
 length = st.number_input("Word length", min_value=4, max_value=None, value=None, step=1)
 
