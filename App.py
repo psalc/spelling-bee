@@ -17,4 +17,6 @@ length = st.number_input("Word length", min_value=4, max_value=None, value=None,
 
 words = filter_words(words, starts_with=starts_with, contains=must_contain, length=length)
 
-st.write(', '.join(words.sort()))
+words.sort()
+
+st.write(', '.join(words))
